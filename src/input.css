@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+   .text-present-1 {
+    @apply text-[20px] leading-[120%] tracking-[0px] font-barlow font-semibold;
+   }
+
+   .text-present-2 {
+    @apply text-[13px] leading-[110%] tracking-[0px] font-barlow font-medium;
+   }
+
+   .text-present-3 {
+    @apply text-[13px] leading-[140%] tracking-[0px] font-barlow font-medium ;
+   }
+
+   .text-present-4 {
+    @apply text-[11px] leading-[110%] tracking-[0px] font-barlow font-medium ;
+   }
+
+}
+
+@layer base{
+  body{
+    @apply flex justify-center items-center min-h-screen bg-Grey-100 py-[70px];
+  }
+
+  img{
+    @apply w-[28px] h-[28px] rounded-full;
+  }
+
+  .card-white {
+    @apply bg-White text-Grey-500;
+  }
+
+  .card-grey {
+    @apply bg-Grey-500 text-White;
+  }
+
+
+  article {
+    @apply rounded-[14px] flex flex-col gap-[16px] p-[32px] items-start w-full;
+  }
+
+  header {
+    @apply flex justify-center gap-[10px];
+  }
+
+  article > p {
+    @apply text-present-3;
+  }
+
+  article h3 {
+    @apply text-present-1;
+  }
+
+  article header p:first-child {
+    @apply text-present-2;
+  }
+
+  article header p:last-child {
+    @apply text-present-4;
+  }
+
+}
